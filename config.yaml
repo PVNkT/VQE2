@@ -1,0 +1,24 @@
+
+#convertor (Partiy, JW(JordanWigner), BK(BravyiKitaev))
+converter: JW
+
+#variational sate (TwoLocal, UCCSD)
+state: UCCSD
+
+#simulator(SV(statevector),QA(qasm), AS(aer))
+backend:
+  is_simulation: True
+  simulator: AS
+  real: least_busy
+
+#optimizer(CO (COBYLA), BF(L_BFGS_B), SL(SLSQP), SP(SPSA))
+optimizer: CO
+
+molecule: 
+  molecule: H2
+  dist: 0.74
+  charge: 0
+  spin: 0
+  basis: sto3g
+
+
